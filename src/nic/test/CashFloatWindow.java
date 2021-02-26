@@ -350,14 +350,16 @@ public class CashFloatWindow extends JPanel {
                 DecimalFormat df = new DecimalFormat("#.##");
 
                 // in app output when the calculate button is hit
+                
+                double floatVal = 1500;
 
-                if(cashMoney > 1500){
+                if(cashMoney > floatVal){
                     res.setText("Float: R" + df.format(cashMoney) + " Over: R"
-                            + df.format(cashMoney - 1500));
+                            + df.format(cashMoney - floatVal));
                     res.setVisible(true);
-                } else if (cashMoney < 1500){
+                } else if (cashMoney < floatVal){
                     res.setText("Float: R" + df.format(cashMoney) + " Under: R"
-                            + df.format(1500 - cashMoney));
+                            + df.format(floatVal - cashMoney));
                     res.setVisible(true);
                 }
                 else {
@@ -369,13 +371,13 @@ public class CashFloatWindow extends JPanel {
                     // outputs the text log
 
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
-                    if(cashMoney < 1500) {
+                    if(cashMoney < floatVal) {
                         FileWriter myWriter = new FileWriter(LocalDate.now() + ".txt", true);
-                        myWriter.write(LocalTime.now().format(dtf) + " The float is: R" + cashMoney + " Under: R" + (1500 - cashMoney) + "\n");
+                        myWriter.write(LocalTime.now().format(dtf) + " The float is: R" + cashMoney + " Under: R" + (floatVal - cashMoney) + "\n");
                         myWriter.close();
-                    } else if (cashMoney > 1500) {
+                    } else if (cashMoney > floatVal) {
                         FileWriter myWriter = new FileWriter(LocalDate.now() + ".txt", true);
-                        myWriter.write(LocalTime.now().format(dtf) + " The float is: R" + cashMoney + " Over: R" + (cashMoney - 1500) + "\n");
+                        myWriter.write(LocalTime.now().format(dtf) + " The float is: R" + cashMoney + " Over: R" + (cashMoney - floatVal) + "\n");
                         myWriter.close();
                     } else {
                         FileWriter myWriter = new FileWriter(LocalDate.now() + ".txt", true);
