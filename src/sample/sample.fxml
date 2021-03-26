@@ -1,0 +1,78 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableRow?>
+<GridPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10">
+<BorderPane>
+    <top>
+        <GridPane alignment="center" hgap="10" vgap="10">
+            <Label text="Float value:" GridPane.columnIndex="0" GridPane.rowIndex="0"  minWidth="100"/>
+            <TextField fx:id="valueOfFloat" promptText="Float Value" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="100"/>
+
+            <padding>
+                <Insets bottom="5"/>
+            </padding>
+
+        </GridPane>
+
+    </top>
+    <center>
+        <GridPane alignment="center" hgap="10" vgap="5">
+
+            <Label text="5c:" GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="50"/>
+            <TextField fx:id="val5C" promptText="5c" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="50"/>
+
+            <Label text="10c:" GridPane.columnIndex="2" GridPane.rowIndex="0" maxWidth="50"/>
+            <TextField fx:id="val10C" promptText="10c" GridPane.columnIndex="3" GridPane.rowIndex="0" maxWidth="50"/>
+
+            <Label text="20c:" GridPane.columnIndex="0" GridPane.rowIndex="1" maxWidth="50"/>
+            <TextField fx:id="val20C" promptText="20c" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="50"/>
+
+            <Label text="50c:" GridPane.columnIndex="2" GridPane.rowIndex="1" maxWidth="50"/>
+            <TextField fx:id="val50C" promptText="50c" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="50"/>
+
+            <Label text="R1:" GridPane.columnIndex="0" GridPane.rowIndex="2" maxWidth="50"/>
+            <TextField fx:id="valR1" promptText="10c" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="50"/>
+
+            <Label text="R2:" GridPane.columnIndex="2" GridPane.rowIndex="2" maxWidth="50"/>
+            <TextField fx:id="valR2" promptText="R2" GridPane.columnIndex="3" GridPane.rowIndex="2" maxWidth="50"/>
+
+            <Label text="R5:" GridPane.columnIndex="0" GridPane.rowIndex="3" maxWidth="50"/>
+            <TextField fx:id="valR5" promptText="R5" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="50"/>
+
+            <Label text="R10:" GridPane.columnIndex="2" GridPane.rowIndex="3" maxWidth="50"/>
+            <TextField fx:id="valR10" promptText="R10" GridPane.columnIndex="3" GridPane.rowIndex="3" maxWidth="50"/>
+
+            <Label text="R20:" GridPane.columnIndex="0" GridPane.rowIndex="4" maxWidth="50"/>
+            <TextField fx:id="valR20" promptText="R20" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="50"/>
+
+            <Label text="R50:" GridPane.columnIndex="2" GridPane.rowIndex="4" maxWidth="50"/>
+            <TextField fx:id="valR50" promptText="R50" GridPane.columnIndex="3" GridPane.rowIndex="4" maxWidth="50"/>
+
+            <Label text="R100:" GridPane.columnIndex="0" GridPane.rowIndex="5" maxWidth="50"/>
+            <TextField fx:id="valR100" promptText="R100" GridPane.columnIndex="1" GridPane.rowIndex="5" maxWidth="50"/>
+
+            <Label text="R200:" GridPane.columnIndex="2" GridPane.rowIndex="5" maxWidth="50"/>
+            <TextField fx:id="valR200" promptText="R200" GridPane.columnIndex="3" GridPane.rowIndex="5" maxWidth="50"/>
+
+        </GridPane>
+    </center>
+    <bottom>
+        <GridPane alignment="BASELINE_LEFT" hgap="10" vgap="10">
+            <padding>
+                <Insets top="5"/>
+            </padding>
+
+            <Button onAction="#onButtonClicked" text="Calculate" GridPane.columnIndex="0" GridPane.rowIndex="0"  minWidth="100"/>
+            <Label fx:id="calculated" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="100"/>
+            <Label fx:id="overUnder" GridPane.columnIndex="0" GridPane.rowIndex="1"  minWidth="100"/>
+            <Label fx:id="overUnderAmount" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="100"/>
+        </GridPane>
+    </bottom>
+</BorderPane>
+</GridPane>
